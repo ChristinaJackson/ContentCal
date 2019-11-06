@@ -15,8 +15,8 @@ header{
   text-align: center;
   font-size: 3em;
   font-weight: bolder;
-  /* padding: 2em;
-  margin-bottom: 2em; */
+  padding: 0.5em;
+ 
 }
 footer {
   background-color: #0b0c10;
@@ -24,6 +24,7 @@ footer {
   grid-column: 2/-1;
   text-align: center;
   font-size: 2em;
+  padding: 1em;
   /* position: absolute;
   width: 100%;
   padding: 2em;
