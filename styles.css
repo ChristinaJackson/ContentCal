@@ -6,17 +6,28 @@
 body{
   background-color: #66fcf1;
   color: #0b0c10;
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
 
 }
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: .5fr 2fr ;
+  grid-template-rows: 50px minmax(200px,1fr) 50px;
+} 
+
 header{
   background-color: #0b0c10 ;
   color: #66fcf1;
   grid-column: 2/-1;
   text-align: center;
-  font-size: 2em;
   font-weight: bolder;
   padding: 0.5em;
   letter-spacing: 1px;
+  font-family: 'Sintony', sans-serif;
+  font-size: 2em;
+
   
  
 }
@@ -49,19 +60,15 @@ ol {
   text-align: center;
   margin: auto;
 }
+
 .day{
   border: solid #0b0c10 1px;
 }
-.container{
-  height: 100vh;
-  display: grid;
-  grid-template-columns: .5fr 2fr ;
-  grid-template-rows: 50px minmax(200px,1fr) 50px;
-}
+
 .calarea{
   background-color:#1f2833;
   display:grid;
-  grid-gap: 1em;
+
 
 }
 .navbar{
