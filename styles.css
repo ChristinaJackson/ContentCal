@@ -4,73 +4,81 @@
  padding: 0;
 }
 body{
-  background-color: #66fcf1;
+  background-color: #1f2833;
   color: #0b0c10;
-  font-family: 'Sintony', sans-serif;
-  font-size: 14px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
 
+}
+h4{
+margin-top: 0;
 }
 .container{
   height: 100vh;
-  display: grid;
-  grid-template-columns: .5fr 2fr ;
-  grid-template-rows: 50px minmax(200px,1fr) 50px;
+  /* display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: .25fr 2fr .25fr ;
+  grid-template-rows: 50px minmax(200px,1fr) 50px; */
 } 
 
 header{
-  background-color: #0b0c10 ;
-  color: #66fcf1;
-  grid-column: 2/-1;
+  
+  background-color: #197eb3;
+  /* color: #66fcf1; */
+  grid-column: 1/-1;
   text-align: center;
   font-weight: bolder;
   padding: 0.5em;
   letter-spacing: 1px;
   font-family: 'Sintony', sans-serif;
   font-size: 2em;
-
-  
  
 }
-footer {
-  background-color: #0b0c10;
-  color: #66fcf1;
-  grid-column: 2/-1;
-  text-align: center;
-  font-size: 1em;
-  padding: 1em;
-  letter-spacing: 1px;
-  /* position: absolute;
-  width: 100%;
-  padding: 2em;
-  bottom: 0; */
+.appName{
+  margin-top: 0;
 }
-.sidebar{
+.headerNav{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  grid-column: 1;
+}
+
+/* .sidebar{
   grid-row: 1/4;
-}
+} */
 ol {
   list-style: none;
 }
+.calarea{
+  background-color:#1f2833;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-column: 1/4; */
+ 
+}
+
 .calgrid {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 21px  repeat(5, 55px);
   background-color: white;
   color: #1f2833;
   border: solid #7E6781 2px;
   text-align: center;
-  margin: auto;
+  font-weight: bold;
+  margin: auto; 
 }
 
 .day{
   border: solid #0b0c10 1px;
-}
-
-.calarea{
-  background-color:#1f2833;
-  display:grid;
-
+  height: 100%;
+  grid-auto-flow: columns;
 
 }
+
+
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -80,7 +88,7 @@ ol {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   padding: 1em;
 }
 .navlinks a {
@@ -93,4 +101,38 @@ a {
 }
 a:hover {
   color: white;
+}
+
+footer {
+ 
+  background-color:lightblue;
+  color: black;
+  grid-column: 1/-1;
+  font-size: 1em;
+  padding: 1em;
+  border: solid red 2px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footerNav{
+border: solid 2px yellowgreen;
+display: flex;
+justify-content: space-between;
+margin:0;
+}
+.footer-nav-left{
+  border: solid orange 2px;
+}
+.footer-nav-right{
+  border: solid red 2px;
+  float: right;
+}
+.block{
+
+}
+button{
+  padding: 10px;
+  border-radius: 1px;
 }
