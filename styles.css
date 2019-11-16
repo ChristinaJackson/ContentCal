@@ -4,15 +4,23 @@
  padding: 0;
 }
 body{
-  background-color: #1f2833;
+  background-color: #FAF9FA;
   color: #0b0c10;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
 
 }
+
+h1{
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
 h4{
 margin-top: 0;
 }
+
 .container{
   height: 100vh;
   /* display: grid;
@@ -22,60 +30,63 @@ margin-top: 0;
 } 
 
 header{
-  
-  background-color: #197eb3;
-  /* color: #66fcf1; */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #404376;
+  color: #e9e5e9;
   grid-column: 1/-1;
   text-align: center;
   font-weight: bolder;
   padding: 0.5em;
   letter-spacing: 1px;
-  font-family: 'Sintony', sans-serif;
+  font-family: "Muli" 'Sintony', sans-serif;
   font-size: 2em;
  
 }
-.appName{
-  margin-top: 0;
-}
+
 .headerNav{
   color: white;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  font-size: 12px;
-  grid-column: 1;
+  flex-wrap: wrap;
+  font-size: 16px; ;
+  align-content: flex-end;
+  
 }
-
+.appName{
+  border: solid red 2px;
+  margin-left: -140px;
+}
 /* .sidebar{
   grid-row: 1/4;
 } */
 ol {
   list-style: none;
 }
-.calarea{
-  background-color:#1f2833;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* grid-column: 1/4; */
- 
-}
+
 
 .calgrid {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(7, 1fr);
-  background-color: white;
-  color: #1f2833;
-  border: solid #7E6781 2px;
+  grid-template-columns: repeat(7, .5fr);
+  color: #090E1E;
   text-align: center;
-  font-weight: bold;
-  margin: auto; 
+  /* font-weight: bold; */
+  font-size: 1em;
+  margin: 1em auto 2em auto;
+  max-width: 75%;
+  background-color:#FAF9FA;
+  
+
 }
 
 .day{
   border: solid #0b0c10 1px;
-  height: 100%;
-  grid-auto-flow: columns;
-
+}
+.day img {
+  margin: 10px;
 }
 
 
@@ -84,55 +95,50 @@ ol {
   justify-content: space-around;
   margin: 1em;
 }
-.navlinks{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  padding: 1em;
-}
-.navlinks a {
-  padding:1em;
+
+.headerNav a {
+  padding:10px;
 }
 
 a {
   color:#0b0c10;
+ text-decoration: none;
+ color: white;
   
 }
 a:hover {
-  color: white;
+  color:#090E1E;
 }
 
 footer {
- 
-  background-color:lightblue;
+  background-color:#FAF9FA;
   color: black;
   grid-column: 1/-1;
   font-size: 1em;
   padding: 1em;
-  border: solid red 2px;
-  position: absolute;
+  margin-top: 0;
+  /* position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0; */
 }
 
 .footerNav{
-border: solid 2px yellowgreen;
 display: flex;
 justify-content: space-between;
-margin:0;
+margin:auto;
+max-width: 80%;
 }
-.footer-nav-left{
-  border: solid orange 2px;
-}
-.footer-nav-right{
-  border: solid red 2px;
-  float: right;
-}
-.block{
+
+
+button{
+padding: 10px;
+color: #E9E5E9 ;
+background-color: #0B5C84;
+border: solid 1px #E9E5E9;
 
 }
-button{
-  padding: 10px;
-  border-radius: 1px;
+button:active{
+  transform: translateY(1px);
+
+  
 }
