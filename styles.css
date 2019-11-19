@@ -23,25 +23,23 @@ margin-top: 0;
 
 .container{
   height: 100vh;
-  /* display: grid;
-  grid-row-gap: 10px;
-  grid-template-columns: .25fr 2fr .25fr ;
-  grid-template-rows: 50px minmax(200px,1fr) 50px; */
 } 
 
 header{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   background-color: #404376;
   color: #E9E5E9;
-  grid-column: 1/-1;
-  text-align: center;
   font-weight: bolder;
-  padding: 0.5em;
+  padding: 0.25em;
   letter-spacing: 1px;
   font-family: "Muli" 'Sintony', sans-serif;
   font-size: 2em;
+  position: fixed;
+  width: 100%;
+  top: 0;
  
 }
 
@@ -55,8 +53,7 @@ header{
   
 }
 .appName{
-  border: solid red 2px;
-  margin-left: -140px;
+
 }
 /* .sidebar{
   grid-row: 1/4;
@@ -69,25 +66,35 @@ ol {
 .calgrid {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(7, .5fr);
+  grid-template-columns: repeat(7, 1fr);
   color: #090E1E;
   text-align: center;
-  /* font-weight: bold; */
+  /*! font-weight: bold; */
   font-size: 1em;
-  margin: 1em auto 2em auto;
-  max-width: 75%;
+  /* margin: 1em auto 2em auto; */
+position: center;
+
   background-color:#FAF9FA;
   
 
 }
+.calArea{
+  display: flex;
+  flex-wrap: inherit;
+  margin: auto;
 
+}
 .day{
   border: solid #0b0c10 1px;
+  display: flex;
+  flex-direction: column;
 }
 .day img {
   margin: 10px;
 }
-
+.date{
+  border-bottom: solid black 2px;
+}
 
 .navbar{
   display: flex;
@@ -116,9 +123,9 @@ footer {
   font-size: 1em;
   padding: 1em;
   margin-top: 0;
-  /* position: absolute;
+  position: fixed;
   width: 100%;
-  bottom: 0; */
+  bottom: 0;
 }
 
 .footerNav{
@@ -138,6 +145,26 @@ border: solid 1px #E9E5E9;
 }
 button:active{
   transform: translateY(1px);
+}
 
-  
+
+@media only screen and (max-width: 1000px){
+  .calArea{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .calgrid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media only screen and (min-width:1000px){
+  .day img{
+    width: 140px;
+    height: 140px;
+  }
 }
