@@ -3,12 +3,12 @@
  margin: 0;
  padding: 0;
 }
+
 body{
   background-color: #FAF9FA;
   color: #0b0c10;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
-
 }
 
 h1{
@@ -37,10 +37,7 @@ header{
   letter-spacing: 1px;
   font-family: "Muli" 'Sintony', sans-serif;
   font-size: 2em;
-  position: fixed;
-  width: 100%;
-  top: 0;
- 
+  margin-bottom: 50px;
 }
 
 .headerNav{
@@ -49,19 +46,13 @@ header{
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 10px;
   
 }
-.appName{
 
-}
-/* .sidebar{
-  grid-row: 1/4;
-} */
 ol {
   list-style: none;
 }
-
 
 .calgrid {
   display: grid;
@@ -72,11 +63,8 @@ ol {
   /*! font-weight: bold; */
   font-size: 1em;
   /* margin: 1em auto 2em auto; */
-position: center;
-
+  position: center;
   background-color:#FAF9FA;
-  
-
 }
 .calArea{
   display: flex;
@@ -89,8 +77,8 @@ position: center;
   display: flex;
   flex-direction: column;
 }
-.day img {
-  margin: 10px;
+.cell > .img {
+  box-shadow: 0px 0px 5px 0px rgba(10,0,0,0.75);
 }
 .date{
   border-bottom: solid black 2px;
@@ -144,11 +132,52 @@ border: solid 1px #E9E5E9;
 
 }
 button:active{
-  transform: translateY(1px);
+  transform: translate(0.5px, 0.5px);
 }
+#calendar{
+  display:grid;
+  grid-template-columns: (7,1fr);
+  margin: auto;
+}
+#calendar ul{
+  list-style: none;
+  padding: 0;
+  margin:0;
+  width:100%
+}
+.dates{
+ 
+}
+#calendar-wrap{
+  align-self: center;
+}
+#calendar li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid black 1px;
+}
+#calendar >  ul {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  overflow: hidden;
+}
+#calendar img{
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 5px 0px  rgba(0,0,0,0.2);
+  margin: 10px;
+}
+#calendar .date{
+ border-bottom: solid black 1px;
+ text-align: center;
+ width: 100%;
+ letter-spacing: 0.5px;
 
-
-@media only screen and (max-width: 1000px){
+}
+@media only screen and (max-width: 1086px){
   .calArea{
     display: flex;
     flex-direction: column;
@@ -159,12 +188,36 @@ button:active{
     align-items: center;
     grid-template-columns: repeat(1, 1fr);
   }
+  #calendar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  #calendar img{
+    width: 300px;
+    height:300px;
+    padding: 0;
+  }
 
 }
 
-@media only screen and (min-width:1000px){
+@media only screen and (min-width:1200px){
   .day img{
-    width: 140px;
-    height: 140px;
+    max-width: 140px;
+    max-height: 140px;
   }
+}
+
+@media only screen and (max-width: 480px){
+  .footerNav{
+    flex-wrap: nowrap;
+  }
+  .button{
+    padding: 5px;
+  }
+  #today-button{
+   display: none;
+  }
+
 }
