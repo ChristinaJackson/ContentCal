@@ -21,14 +21,11 @@ h4{
 margin-top: 0;
 }
 
-.container{
-  height: 100vh;
-} 
 
 header{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   background-color: #404376;
   color: #E9E5E9;
@@ -53,25 +50,6 @@ header{
 ol {
   list-style: none;
 }
-
-.calgrid {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(7, 1fr);
-  color: #090E1E;
-  text-align: center;
-  /*! font-weight: bold; */
-  font-size: 1em;
-  /* margin: 1em auto 2em auto; */
-  position: center;
-  background-color:#FAF9FA;
-}
-.calArea{
-  display: flex;
-  flex-wrap: inherit;
-  margin: auto;
-
-}
 .day{
   border: solid #0b0c10 1px;
   display: flex;
@@ -95,7 +73,7 @@ ol {
 }
 
 a {
-  color:#0b0c10;
+color:#0b0c10;
  text-decoration: none;
  color: white;
   
@@ -111,28 +89,32 @@ footer {
   font-size: 1em;
   padding: 1em;
   margin-top: 0;
-  position: fixed;
+  /* position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 0; */
 }
 
 .footerNav{
 display: flex;
-justify-content: space-between;
-margin:auto;
-max-width: 80%;
+justify-content: space-around;
+flex-wrap: nowrap;
 }
 
 
 button{
 padding: 10px;
+margin: -2px;
 color: #E9E5E9 ;
 background-color: #0B5C84;
 border: solid 1px #E9E5E9;
-
 }
 button:active{
   transform: translate(0.5px, 0.5px);
+}
+
+}
+p.content{
+  font-size: 1px;
 }
 #calendar{
   display:grid;
@@ -145,8 +127,11 @@ button:active{
   margin:0;
   width:100%
 }
-.dates{
- 
+#calendar span{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
 }
 #calendar-wrap{
   align-self: center;
@@ -215,7 +200,7 @@ button:active{
   .footerNav{
     flex-wrap: nowrap;
   }
-  
+
   .button{
     padding: 5px;
   }
